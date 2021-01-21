@@ -1,11 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Card from './Card.js'
+import './Card.css';
+
 function App() {
   return (
     <div className="App">
+      < Card />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>Hello Me!</h1>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
