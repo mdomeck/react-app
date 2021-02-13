@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 import Card from './Card.js'
@@ -8,7 +8,9 @@ function App() {
   return (
     <div className="App">
       < Card />
-      <header className="App-header">
+      < Card />
+      < Card />
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Hello Me!</h1>
         <p>
@@ -22,7 +24,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
