@@ -59,7 +59,7 @@ class InputEvents extends Component {
         <button 
           onClick={this.handleOnClick}
           onMouseDown={this.handleOnMouseDown}
-          onMouseUp={this.handleMouseUp}
+          onMouseUp={this.handleOnMouseUp}
         >
           Click Me
         </button>
@@ -89,7 +89,7 @@ class InputEvents extends Component {
           <p>Submitted value: {this.state.formInputTextSubmitted}</p>
         </form>
       </section>
-      </>
+    </>
     )
   }
 }
