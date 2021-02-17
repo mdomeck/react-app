@@ -21,7 +21,7 @@ class MovementEvents extends Component {
 
   handleScroll = () => {
     this.setState({
-      windowScrollY: Math.floor(window.ScrollY)
+      windowScrollY: Math.floor(window.scrollY)
     })
   }
 
