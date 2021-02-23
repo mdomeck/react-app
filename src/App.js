@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+import AddressBook from './addressBook/AddressBook'
+
+import CardStateful from './addressBook/examples/CardStateful'
+import CardStateless from './addressBook/examples/CardStateless'
+
 import ShoppingList from './shoppingList/ShoppingList.js'
 import './shoppingList/ShoppingList.css'
 
@@ -13,6 +18,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <AddressBook />
+        <CardStateful food="Pizza" />
+        <CardStateless food="Ramen" />
         <ShoppingList/>
         <Card/>
         <InputEvents/>
