@@ -13,7 +13,10 @@ const activeClass = contact.favorite ? 'active' : ''
      <header className="card-header">
        <span initials={contact.initials}></span>
        <h2>{contact.name}</h2>
-       <div className = {`favorite ${activeClass}`}>
+       <div 
+         className = {`favorite ${activeClass}`}
+         onClick={() => { props.handleFavoriteToggle(index) }}
+         >
          ☆
        </div>
      </header>
@@ -23,6 +26,10 @@ const activeClass = contact.favorite ? 'active' : ''
          <li>
            <span>Phone</span>
            {contact.phone ? contact.phone : 'n/a'}
+         </li>
+         <li>
+           <span>Email</span>
+           {contact.email ? contact.email : 'n/a'}
          </li>
        </ul>
      </main>

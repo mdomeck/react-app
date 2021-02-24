@@ -1,9 +1,9 @@
-import Reat, { Component } from 'react'
+import React, { Component } from 'react'
 
 import './AddressBook.css'
 import Card from './Card'
 
-class ShoppingList extends Component {
+class AddressBook extends Component {
   constructor(props) {
     super(props)
 
@@ -32,6 +32,40 @@ class ShoppingList extends Component {
         }
       ]
     }
+
+    this.handleFavoriteToggle = this.handleFavoriteToggle.bind(this)
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const prevStateString = JSON.stringify(prevState.contacts)
+    const updatedStateString = JSON.stringify(this.state.contacts)
+
+    if (prevStateString !== updatedStateString) {
+      console.log("Save this:", updatedStateString)
+      localStorage.setItem('contacts', updatedStateString)
+    }
+  }
+
+  componentDidMount() {
+    const savedStateFromLocalStorage = localStorage.getItem('contacts')
+
+    if (savedStateFromLocalStorage) {
+      this.setState({
+        contacts: JSON.parse(savedStateFromLocalStorage)
+      })
+    }
+  }
+
+  handleFavoriteToggle(contactIndex) {
+    const newContactsState = [...this.state.contacts]
+    newContactsState[contactIndex] = {
+      ...newContactsState[contactIndex],
+      favorite: !newContactsState[contactIndex].favorite
+    }
+
+    this.setState({
+      contacts: newContactsState
+    })
   }
 
   render() {
@@ -48,6 +82,7 @@ class ShoppingList extends Component {
         return (
           <Card
             contact={contact}
+            handleFavoriteToggle={this.handleFavoriteToggle}
             index={index}
             key={index}
             />
@@ -58,4 +93,4 @@ class ShoppingList extends Component {
   }
 }
 
-export default ShoppingList;
+export default AddressBook;
