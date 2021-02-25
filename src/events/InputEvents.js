@@ -18,7 +18,6 @@ class InputEvents extends Component {
   }
 
   handleOnClick() {
-  
     this.setState((state) => {
       return {
         mouseClicked: state.mouseClicked + 1
