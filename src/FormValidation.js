@@ -86,7 +86,7 @@ render() {
     <h3>Form Submit events</h3>
     <form onSubmit={this.handleOnSubmit}>
       <label>
-        <span class="error">{firstNameError}</span>
+        <span className="error">{firstNameError}</span>
         <input
           type="text"
           name="firstName"
@@ -97,7 +97,7 @@ render() {
         </label>
 
         <label>
-        <span class="error">{feedbackError}</span>
+        <span className="error">{feedbackError}</span>
           <input
             type="text"
             name="feedback"
@@ -108,7 +108,7 @@ render() {
         </label>
 
         <label>
-        <span class="error">{acceptedTermsError}</span>
+        <span className="error">{acceptedTermsError}</span>
           <input
             type="checkbox"
             name="acceptedTerms"

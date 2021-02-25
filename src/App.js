@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import AddressBook from './addressBook/AddressBook'
+import CardHooks from './addressBook/CardHooks'
 
 import CardStateful from './addressBook/examples/CardStateful'
 import CardStateless from './addressBook/examples/CardStateless'
@@ -18,14 +19,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <CardHooks />
         <AddressBook />
         <CardStateful food="Pizza" />
         <CardStateless food="Ramen" />
-        <ShoppingList/>
-        <Card/>
-        <InputEvents/>
-        <MovementEvents/>
-        <FormValidation/>
+        <ShoppingList />
+        <Card />
+        <InputEvents />
+        <MovementEvents />
+        <FormValidation />
       </div>
     );
   }
