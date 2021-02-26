@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
-import AddressBook from './addressBook/AddressBook'
+import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
+
+// import AddressBook from './addressBook/AddressBook'
+import './Default.css'
+
 import CardHooks from './addressBook/CardHooks'
 
 import CardStateful from './addressBook/examples/CardStateful'
@@ -19,7 +23,29 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CardHooks />
+        <h1>Hello world!</h1>
+        <Router>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about"> About</Link></li>
+            <li> <Link to="/contact"> Contact</Link></li>
+          </ul>    
+
+          <Route exact path="/" render={() => {
+            return <h2>Home page</h2>
+          }} />
+
+          <Route path="/about" render={() => {
+            return <h2>About page</h2>
+          }} />
+
+          <Route path="/contact" render={() => {
+            return <h2>Contact page</h2>
+          }} />
+        </Router>
+          
+      
+        {/* <CardHooks /> 
         <AddressBook />
         <CardStateful food="Pizza" />
         <CardStateless food="Ramen" />
@@ -27,7 +53,7 @@ class App extends Component {
         <Card />
         <InputEvents />
         <MovementEvents />
-        <FormValidation />
+        <FormValidation /> */}
       </div>
     );
   }
