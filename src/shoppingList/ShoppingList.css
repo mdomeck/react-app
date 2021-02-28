@@ -75,7 +75,7 @@ ul {
 }
 
 li {
-  display: flex;
+  /* display: flex; */ /* Doesn't work with Default.css */ 
   align-items: baseline;
   border-radius: 4px;
 }
