@@ -5,7 +5,7 @@ import {
   Route,
   Link,
   Switch,
-  Redirect
+  //Redirect
 } from 'react-router-dom';
 
 // import AddressBook from './addressBook/AddressBook'
