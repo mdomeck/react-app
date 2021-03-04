@@ -8,7 +8,7 @@ class Vehicle extends Component {
     }
   }
 
-  componentDidMount() { // this only loads on first refresh.
+  componentDidMount() {
     const id = this.props.match.params.vehicleId;
     const savedVehicle = localStorage.getItem(`vehicle-${id}`)
     if (savedVehicle) {
